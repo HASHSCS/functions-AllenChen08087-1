@@ -5,6 +5,8 @@ def square(number):
     :return: int or float, the square of the input number
     """
     pass  # Implement your solution here
+    return number*number
+    
 
 
 def reverse_string(s):
@@ -14,6 +16,11 @@ def reverse_string(s):
     :return: str, the reversed string
     """
     pass  # Implement your solution here
+    r=""
+    l = len(s) -1
+    for i in range (l,-1,-1):
+        r = r +s[i]
+    return r
 
 
 def is_prime(n):
@@ -23,7 +30,14 @@ def is_prime(n):
     :return: bool, True if the number is prime, otherwise False
     """
     pass  # Implement your solution here
+    
+    prime = True
+    for i in range (2,(n),1):
+        if n%i == 0:
+            prime=False
+    return(prime)
 
+    
 
 def factorial(n):
     """
@@ -32,6 +46,11 @@ def factorial(n):
     :return: int, the factorial of the input number
     """
     pass  # Implement your solution here
+    l =1
+    for i in range (n,0,-1):
+        l = l*i
+    return (l)
+    
 
 def find_maximum(lst):
     """
@@ -40,6 +59,12 @@ def find_maximum(lst):
     :return: int, the maximum number in the list
     """
     pass  # Implement your solution here
+    l = lst[1]
+    for i in (lst):
+        if (i > l):
+            l = i
+    return l
+    
 
 def odd_or_even(n):
     """
@@ -48,6 +73,10 @@ def odd_or_even(n):
     :return: str, "Odd" or "Even"
     """
     pass  # Implement your solution here
+    if n%2 == 0:
+        return ("Even")
+    if n%2 != 0:
+        return("Odd")
 
 def is_palindrome(s):
     """
@@ -58,6 +87,17 @@ def is_palindrome(s):
     :return: bool, `True` if the string is a palindrome, `False` otherwise.
     """
     pass  # Implement your solution here
+   
+    f = ""
+    for i in range (len(s)-1,-1,-1):
+        f = f + s[i]
+    if (s == f):
+        haha = True
+        return haha
+    if (s != f):
+        haha = False
+        return haha
+
 
 def find_gcd(a, b):
     """
@@ -68,4 +108,14 @@ def find_gcd(a, b):
     :return: int, the greatest common divisor of `a` and `b`.
     """
     pass  # Implement your solution here
+    l = 1
+    if (a < b): 
+        g =a
+    if (b<a):
+        g = b
+    for i in range (1,g,1):
+        if (a%i == 0) and (b%i == 0):
+            l = i
+    return l
+
 

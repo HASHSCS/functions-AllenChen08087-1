@@ -8,7 +8,8 @@ class TestMainMethods(unittest.TestCase):
         self.assertEqual(square(-2), 4)
         self.assertEqual(square(0), 0)
         self.assertAlmostEqual(square(1.1), 1.21)
-
+   
+    
     def test_reverse_string(self):
         self.assertEqual(reverse_string('hello'), 'olleh')
         self.assertEqual(reverse_string('Python'), 'nohtyP')
